@@ -22,16 +22,3 @@ def runner(length) -> bool:
     print(list(myList))
     a = Solution
     print(a.containsDuplicate(myList))
-
-
-def containsDuplicateOld(nums: List[int]) -> bool:
-    while True:
-        try:
-            num = nums.pop()
-            try:
-                nums.index(num)
-                return True
-            except ValueError:
-                continue
-        except IndexError:
-            return False
